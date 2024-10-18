@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Omar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <img src="OMAR LAHYANI.JPEG.png" alt="Photo de Omar" class="header-photo">
+            <div>
+                <h1>Omar</h1>
+                <p>Développeur et programmeur</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle">Activer le Mode Sombre</button>
+    </header>
+
+    <section id="about" class="container hidden">
+        <h2>À propos de moi</h2>
+        <div class="about-content">
+            <img src="OMAR LAHYANI.JPEG.png" alt="Photo de Omar" class="profile-photo">
+            <p>Je suis Omar, développeur passionné par la technologie et la création d'applications web et mobiles. J'aime résoudre des problèmes complexes et travailler sur des projets innovants.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container hidden">
+        <h2>Projets</h2>
+        <div class="carousel">
+            <img src="project1.jpg.png" alt="Projet 1" class="carousel-slide">
+            <img src="project2.jpg.png" alt="Projet 2" class="carousel-slide">
+            
+            <button id="prev">Précédent</button>
+            <button id="next">Suivant</button>
+        </div>
+    </section>
+
+    <section id="contact" class="container hidden">
+        <h2>Contactez-moi</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
