@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Omar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="container header-content">
-            <img src="OMAR LAHYANI.JPEG.png" alt="Photo de Omar" class="header-photo">
-            <div>
-                <h1>Omar</h1>
-                <p>Développeur et programmeur</p>
-            </div>
-        </div>
         <nav>
             <ul>
                 <li><a href="#about">À propos</a></li>
@@ -24,38 +18,84 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button id="dark-mode-toggle">Activer le Mode Sombre</button>
+        <div class="header-content">
+            <img src="OMAR LAHYANI.JPEG.png" alt="Omar Lahyani" class="profile-photo-header">
+            <h1>Omar Lahyani</h1>
+            <p>Développeur web & mobile</p>
+            <a href="#contact" class="btn">Contactez-moi</a>
+        </div>
+        
+        <!-- Bouton de couleur -->
+        <div class="color-picker-container">
+            <button id="color-picker-button">
+                <img src="color-icon.png" alt="Choisir couleur" />
+            </button>
+            <input type="color" id="color-picker" style="display: none;">
+        </div>
     </header>
 
-    <section id="about" class="container hidden">
+    <section id="about" class="section">
         <h2>À propos de moi</h2>
-        <div class="about-content">
-            <img src="OMAR LAHYANI.JPEG.png" alt="Photo de Omar" class="profile-photo">
-            <p>Je suis Omar, développeur passionné par la technologie et la création d'applications web et mobiles. J'aime résoudre des problèmes complexes et travailler sur des projets innovants.</p>
+        <p>Je suis Omar, un développeur passionné par la création d'applications web et mobiles. J'aime apprendre de nouvelles technologies et relever des défis complexes dans mes projets.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fas fa-code"></i>
+                <h3>Développement Web</h3>
+                <p>HTML, CSS, JavaScript, PHP</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Développement Mobile</h3>
+                <p>Android Studio, Kotlin</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-tools"></i>
+                <h3>Outils</h3>
+                <p>Git, GitHub, Visual Studio</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Gestion de projet</h3>
+                <p>Travail d'équipe, Résolution de problèmes</p>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="container hidden">
+    <section id="projects" class="section">
         <h2>Projets</h2>
-        <div class="carousel">
-            <img src="project1.jpg.png" alt="Projet 1" class="carousel-slide">
-            <img src="project2.jpg.png" alt="Projet 2" class="carousel-slide">
-            
-            <button id="prev">Précédent</button>
-            <button id="next">Suivant</button>
+        <div class="projects-container">
+            <div class="project">
+                <img src="project1.jpg.png" alt="Projet 1">
+                <h3>Projet 1</h3>
+                <p>Un site web pour une pharmacie.</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg.png" alt="Projet 2">
+                <h3>Projet 2</h3>
+                <p>Application de réservation de terrains.</p>
+            </div>
+            <!-- Ajoutez d'autres projets ici -->
         </div>
     </section>
 
-    <section id="contact" class="container hidden">
+    <section id="contact" class="section">
         <h2>Contactez-moi</h2>
         <form id="contact-form">
             <input type="text" id="name" name="name" placeholder="Votre nom" required>
             <input type="email" id="email" name="email" placeholder="Votre email" required>
             <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
+            <button type="submit" class="btn">Envoyer</button>
         </form>
         <p id="form-message"></p>
     </section>
+
+    <footer>
+        <p>© 2024 Omar Lahyani. Tous droits réservés.</p>
+    </footer>
 
     <script src="script.js"></script>
 
