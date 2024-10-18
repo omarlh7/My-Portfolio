@@ -1,3 +1,14 @@
+// Afficher le sélecteur de couleur lorsque le bouton est cliqué
+document.getElementById('color-picker-button').addEventListener('click', function() {
+    document.getElementById('color-picker').click();
+});
+
+// Changer la couleur de fond de la page en fonction de la sélection
+document.getElementById('color-picker').addEventListener('input', function() {
+    const selectedColor = this.value;
+    document.body.style.backgroundColor = selectedColor;
+});
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -37,12 +48,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         formMessage.textContent = "Veuillez remplir tous les champs.";
         formMessage.style.color = "red";
     }
-});
-
-// Dark Mode Toggle
-const toggleButton = document.getElementById('dark-mode-toggle');
-toggleButton.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
 });
 
 // Carousel
